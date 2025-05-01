@@ -1,0 +1,51 @@
+{
+	"name": "Folha de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Toque",
+					"sid": 748388371839791,
+					"parameters": {
+						"object": "play"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 929711322586029,
+					"parameters": {
+						"layout": "Layout 2"
+					}
+				}
+			],
+			"sid": 366466159242077
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "magia",
+					"sid": 686583794617639,
+					"parameters": {
+						"object": "mor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "magia",
+					"sid": 688938110701271
+				}
+			],
+			"sid": 186131425703984
+		}
+	],
+	"sid": 954708035580546
+}

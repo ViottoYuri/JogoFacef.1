@@ -1,0 +1,445 @@
+{
+	"name": "Folha de eventos 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Pontos",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 643741703218888
+		},
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 584383455232953
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 104513959177734
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "RankingdeJogadores",
+					"sid": 408888827401866,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "RankingdeJogadores",
+					"sid": 697908959690446,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "NomedeJogador",
+					"sid": 354901570430881,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Enviar",
+					"sid": 608640791482172,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOver",
+					"sid": 683735048266744,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SelecioneEspacoParaReiniciar",
+					"sid": 706502192370175,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 343718418461651
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 910135690550538,
+					"parameters": {
+						"interval-seconds": "random(0.75, 2)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 233597399506090,
+					"parameters": {
+						"object-to-create": "mor",
+						"layer": "0",
+						"x": "random(34,435)",
+						"y": "-10",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 738307236742832
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 466072794642615,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bruxa",
+					"sid": 801443815706036,
+					"parameters": {
+						"object": "magia",
+						"layer": "0",
+						"image-point": "-100",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "magia",
+					"sid": 945500539595572,
+					"parameters": {
+						"angle": "-90"
+					}
+				}
+			],
+			"sid": 753204282700576
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "magia",
+					"sid": 259973505728613,
+					"parameters": {
+						"object": "mor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "magia",
+					"sid": 738670077902130,
+					"parameters": {
+						"object": "Sprite3",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "mor",
+					"sid": 989825214306959,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 387681925692215
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "mor",
+					"sid": 216348176816483,
+					"parameters": {
+						"instance-variable": "vida",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "mor",
+					"sid": 222976207809795
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "mor",
+					"sid": 574929512616339,
+					"parameters": {
+						"object": "Sprite3",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 437957500702199,
+					"parameters": {
+						"variable": "Score",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 545488466074604
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "mor",
+					"sid": 531518341264839,
+					"parameters": {
+						"object": "bruxa"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bruxa",
+					"sid": 804579870448022
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOver",
+					"sid": 641579261899394,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "RankingdeJogadores",
+					"sid": 791478860386791,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "NomedeJogador",
+					"sid": 776181609510875,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Enviar",
+					"sid": 707653166176125,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "request-url",
+					"objectClass": "AJAX",
+					"sid": 915368711728876,
+					"parameters": {
+						"tag": "\"Atualizar\"",
+						"url": "\"https://bancodedadosfacef-default-rtdb.firebaseio.com/ranking.json\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SelecioneEspacoParaReiniciar",
+					"sid": 817642223745640,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 668134734090888
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 844653284808024,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 614576871325464,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 381369891968176
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "mor",
+					"sid": 398359676316458,
+					"parameters": {
+						"speed": "550"
+					}
+				}
+			],
+			"sid": 338205481998425
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 784416360458355,
+					"parameters": {
+						"tag": "\"Atualizar\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 481235198975381,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 268072431059455,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\"{\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 769222174383907,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\":\",\": \")\r"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 129025927410749,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\"}\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 443002209657460,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\"\"\"\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 281198315821711,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\",\",newline)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "RankingdeJogadores",
+					"sid": 299456473260386,
+					"parameters": {
+						"text": "Pontos"
+					}
+				}
+			],
+			"sid": 403310757756822
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Enviar",
+					"sid": 114207416379312
+				}
+			],
+			"actions": [
+				{
+					"id": "post-to-url",
+					"objectClass": "AJAX",
+					"sid": 882941262693268,
+					"parameters": {
+						"tag": "\"Atualizar\"",
+						"url": "\"https://bancodedadosfacef-default-rtdb.firebaseio.com/ranking.json\"",
+						"data": "\"{\"\"\"&NomedeJogador.Text&\"\"\" : \"&Score&\"}\"",
+						"method": "\"PATCH\""
+					}
+				}
+			],
+			"sid": 929826760748853
+		}
+	],
+	"sid": 600800769932557
+}

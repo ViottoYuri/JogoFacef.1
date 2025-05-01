@@ -1,0 +1,70 @@
+{
+	"name": "Sprite3",
+	"plugin-id": "Sprite",
+	"sid": 111277388975318,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Esmaecer",
+			"sid": 563097986669595
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 114,
+						"height": 163,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9127848,
+						"collisionPoly": {
+							"points": [
+								0.2982456140350877,
+								0.34355828220858897,
+								0.7192982456140351,
+								0.34355828220858897,
+								0.8421052631578947,
+								0.4294478527607362,
+								0.8421052631578947,
+								0.4723926380368098,
+								0.7807017543859649,
+								0.5950920245398773,
+								0.6578947368421053,
+								0.6809815950920245,
+								0.35964912280701755,
+								0.6809815950920245,
+								0.23684210526315788,
+								0.5950920245398773,
+								0.17543859649122806,
+								0.4723926380368098,
+								0.17543859649122806,
+								0.4294478527607362
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 410368553031908,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

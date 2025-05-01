@@ -1,0 +1,71 @@
+{
+	"name": "bruxa",
+	"plugin-id": "Sprite",
+	"sid": 240650405690407,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Plataforma",
+			"sid": 400770728819976
+		},
+		{
+			"behaviorId": "bound",
+			"name": "RestritoAoLayout",
+			"sid": 127254581339433
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 199,
+						"height": 421,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2887283,
+						"collisionPoly": {
+							"points": [
+								0.6733668341708543,
+								0.14014251781472684,
+								0.9899497487437185,
+								0.6460807600950119,
+								0.9346733668341709,
+								0.7173396674584323,
+								0.7989949748743719,
+								0.8076009501187649,
+								0.5778894472361809,
+								0.8574821852731591,
+								0.4623115577889447,
+								0.8646080760095012,
+								0,
+								0.8099762470308789,
+								0,
+								0.3752969121140142
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 321468997786845,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

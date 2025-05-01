@@ -1,0 +1,18 @@
+{
+	"name": "Score",
+	"plugin-id": "Text",
+	"sid": 854500205678112,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Score",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 799789502718525
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

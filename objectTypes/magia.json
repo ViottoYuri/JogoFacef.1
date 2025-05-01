@@ -1,0 +1,66 @@
+{
+	"name": "magia",
+	"plugin-id": "Sprite",
+	"sid": 773263202679638,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 525665936570974
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 219,
+						"height": 258,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3932495,
+						"collisionPoly": {
+							"points": [
+								0.0091324200913242,
+								0.01937984496124031,
+								0.9863013698630136,
+								0.027131782945736434,
+								0.7853881278538812,
+								0.6124031007751938,
+								0.7488584474885844,
+								0.6434108527131783,
+								0.6621004566210046,
+								0.686046511627907,
+								0.4429223744292237,
+								0.6821705426356589,
+								0.273972602739726,
+								0.6395348837209303,
+								0.1735159817351598,
+								0.5271317829457365
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 915084208770673,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

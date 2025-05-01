@@ -1,0 +1,70 @@
+{
+	"name": "mor",
+	"plugin-id": "Sprite",
+	"sid": 974168602619618,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "vida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 351022626479842
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 812100553969137
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 441,
+						"height": 565,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9551839,
+						"collisionPoly": {
+							"points": [
+								0.19047619047619047,
+								0.5469026548672566,
+								0.19047619047619047,
+								0.4761061946902655,
+								0.3424036281179138,
+								0.35044247787610616,
+								0.5011337868480725,
+								0.2654867256637168,
+								0.4897959183673469,
+								0.7575221238938052,
+								0.34013605442176864,
+								0.6725663716814159
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 661884614992262,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
